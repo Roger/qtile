@@ -1367,6 +1367,7 @@ class Qtile(command.CommandObject):
         if c and (not c.group or not c.group.screen):
             return
         w.map()
+        print "Mapped!", c.name, c.window.wid
 
     def handle_DestroyNotify(self, e):
         self.unmanage(e.window)
